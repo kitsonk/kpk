@@ -1,0 +1,28 @@
+{
+	"name": "kpk",
+	"author": "Kitson Kelly",
+	"description": "Several useful widgets I have developed",
+	"version":"1.0.0",
+	"main":"./DataStreamContainer",
+	"dependencies": {
+		"dojo": "current",
+		"dijit": "current"
+	},
+	"licenses": [
+		 {
+				 "type": "AFLv2.1",
+				 "url": "http://trac.dojotoolkit.org/browser/dojo/trunk/LICENSE#L43"
+		 },
+		 {
+				 "type": "BSD",
+				 "url": "http://trac.dojotoolkit.org/browser/dojo/trunk/LICENSE#L13"
+		 }
+	],
+	"repository": {
+    	"type":"git",
+    	"url":"http://github.com/kitsonk/kpk"
+  	},
+	"bugs": "http://github.com/kitsonk/kpk/issues",
+	"keywords": ["JavaScript", "Dojo", "Widget"],
+	"homepage": "http://blog.kitsonkelly.com/"
+}

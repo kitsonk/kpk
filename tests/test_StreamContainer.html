@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Stream Container Widget Test</title>
+
+	<style type="text/css">
+		@import "../../dojo/resources/dojo.css";
+		@import "../../dijit/tests/css/dijitTests.css";
+		@import "../resources/StreamContainer.css";
+	</style>
+
+
+	<!-- required: the default dijit theme: -->
+	<link id="themeStyles" rel="stylesheet" href="../../dijit/themes/tundra/tundra.css">
+
+	<!-- required: dojo.js -->
+	<script type="text/javascript" src="../../dojo/dojo.js"
+		data-dojo-config="isDebug: true, async: true, parseOnLoad: true"></script>
+	
+	<!-- only needed for alternate theme testing: -->
+	<script type="text/javascript" src="../../dijit/tests/_testCommon.js"></script>
+
+	<script type="text/javascript">
+		require (
+			["kpk/StreamContainer",
+			 "dijit/form/Button",
+			 "dojo/parser",
+			 "dojo/domReady!"
+			],function (StreamContainer, Button, parser){
+				
+			});
+
+	</script>
+</head>
+<body class="tundra">
+	<h1 class="testTitle">OCP StreamContainer Widget Test</h1>
+	<p>
+	Here is a Stream Container:
+	</p>
+	<button data-dojo-type="dijit/form/Button" id="b1" data-dojo-props="">Add Item
+		<script type="dojo/connect" data-dojo-event="onClick">
+			dijit.byId("sc1").addItem("Now is the time for all good men <b>to</b> come to the aid of their country");
+		</script>
+	</button>
+	<button data-dojo-type="dijit/form/Button" id="b2" data-dojo-props="">Append Item
+		<script type="dojo/connect" data-dojo-event="onClick">
+			dijit.byId("sc1").appendItem("How now brown cow?");
+		</script>
+	</button>
+	<div data-dojo-type="kpk/StreamContainer" id="sc1" data-dojo-props="more:true" style="margin-left: 5em; margin-right: 5em; margin-top: 3em;">
+		<div data-dojo-subtype="title">StreamContainer 1</div>
+		<div data-dojo-subtype="header">Test Header</div>
+		<script type="dojo/connect" data-dojo-event="onMoreClick" data-dojo-args="e">
+			console.log("onMoreClick");
+		</script>
+		<script type="dojo/connect" data-dojo-event="onMoreVisible">
+			console.log("onMoreVisible");
+		</script>
+	</div>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Data Stream Container Widget Test</title>
+
+	<style type="text/css">
+		@import "../../dojo/resources/dojo.css";
+		@import "../../dijit/tests/css/dijitTests.css";
+		@import "../resources/StreamContainer.css";
+	</style>
+
+
+	<!-- required: the default dijit theme: -->
+	<link id="themeStyles" rel="stylesheet" href="../../dijit/themes/tundra/tundra.css">
+
+	<!-- required: dojo.js -->
+	<script type="text/javascript" src="../../dojo/dojo.js"
+		data-dojo-config="isDebug: true, async: true, parseOnLoad: false"></script>
+	
+	<!-- only needed for alternate theme testing: -->
+	<script type="text/javascript" src="../../dijit/tests/_testCommon.js"></script>
+
+	<script type="text/javascript">
+		require([
+			"kpk/DataStreamContainer",
+			"dojo/store/Memory",
+			"dijit/form/Button",
+			"dojo/parser",
+			"dojo/domReady!"],
+			function(DataStreamContainer,Memory,Button,parser){
+				var storeData = [
+                 {id: 1, value: "One", other: "Un"},
+                 {id: 2, value: "Two", other: "Deux"},
+                 {id: 3, value: "Three", other: "Trois"},
+                 {id: 4, value: "Four", other: "Quatre"},
+                 {id: 5, value: "Five", other: "Cinq"},
+                 {id: 6, value: "Six", other: "Six"},
+                 {id: 7, value: "Seven", other: "Sept"},
+                 {id: 8, value: "Eight", other: "Huit"},
+                 {id: 9, value: "Nine", other: "Neuf"},
+                 {id: 10, value: "Ten", other: "Dix"},
+                 {id: 11, value: "Eleven", other: "Onze"},
+                 {id: 12, value: "Twelve", other: "Douze"},
+                 {id: 13, value: "Thirteen", other: "Trieze"},
+                 {id: 14, value: "Fourteen", other: "Quatorze"},
+                 {id: 15, value: "Fiveteen", other: "Quinze"},
+                 {id: 16, value: "Sixteen", other: "Seize"},
+                 {id: 17, value: "Seventeen", other: "Dix-Sept"},
+                 {id: 18, value: "Eighteen", other: "Dix-Huit"},
+                 {id: 19, value: "Nineteen", other: "Dix-Neuf"},
+                 {id: 20, value: "Twenty", other: "Vignt"},
+                 {id: 21, value: "Twenty-One", other: "Vignt-et-Un"},
+                 {id: 22, value: "Twenty-Two", other: "Vignt-Deux"},
+                 {id: 23, value: "Twenty-Three", other: "Vignt-Trois"},
+                 {id: 24, value: "Twenty-Four", other: "Vignt-Quatre"},
+                 {id: 25, value: "Twenty-Five", other: "Vignt-Cinq"},
+				];
+			
+				store1 = new Memory({
+					data: storeData
+				});
+			
+				parser.parse();
+		});
+
+	</script>
+</head>
+<body class="tundra">
+	<h1 class="testTitle">OCP DataStreamContainer Widget Test</h1>
+	<p>Here is a Data Stream Container that uses default values:</p>
+	<button data-dojo-type="dijit/form/Button" id="b1">Load dsc1
+		<script type="dojo/connect" data-dojo-event="onClick" data-dojo-args="e">
+			dijit.byId("dsc1")._doQuery();
+		</script>
+	</button>
+	<div data-dojo-type="kpk/DataStreamContainer" id="dsc1" data-dojo-props="store:store1" style="margin-left: 5em; margin-right: 5em; margin-top: 3em;">
+		<div data-dojo-subtype="title">DataStreamContainer 1</div>
+		<div data-dojo-subtype="header">Test Header 1</div>
+		<script type="dojo/connect" data-dojo-event="onMoreVisible">
+			console.log("dsc1.onMoreVisible");
+			this._doQuery();
+		</script>
+	</div>
+
+	<p>Here is a Data Stream Container that has a "onItem" handler:</p>
+	<button data-dojo-type="dijit/form/Button" id="b2">Load dsc2
+		<script type="dojo/connect" data-dojo-event="onClick" data-dojo-args="e">
+			dijit.byId("dsc2")._doQuery();
+		</script>
+	</button>
+	<div data-dojo-type="kpk/DataStreamContainer" id="dsc2" data-dojo-props="store:store1" style="margin-left: 5em; margin-right: 5em; margin-top: 3em;">
+		<div data-dojo-subtype="title">DataStreamContainer 2</div>
+		<div data-dojo-subtype="header">Test Header 2</div>
+		<script type="dojo/connect" data-dojo-event="onMoreVisible">
+			this._doQuery();
+		</script>
+		<script type="dojo/connect" data-dojo-event="onItem" data-dojo-args="item">
+			return "English: "+item.value+"</br>French: "+item.other;
+		</script>
+	</div>
+
+	<p>Here is a Data Stream Container that specifies a "contentField" field:</p>
+	<button data-dojo-type="dijit/form/Button" id="b3">Load dsc3
+		<script type="dojo/connect" data-dojo-event="onClick" data-dojo-args="e">
+			dijit.byId("dsc3")._doQuery();
+		</script>
+	</button>
+	<div data-dojo-type="kpk/DataStreamContainer" id="dsc3" data-dojo-props="store:store1,contentField:'other'" style="margin-left: 5em; margin-right: 5em; margin-top: 3em;">
+		<div data-dojo-subtype="title">DataStreamContainer 3</div>
+		<div data-dojo-subtype="header">Test Header 3</div>
+		<script type="dojo/connect" data-dojo-event="onMoreClick">
+			this._doQuery();
+		</script>
+	</div>
+</body>
+</html>

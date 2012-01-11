@@ -1,0 +1,272 @@
+@CHARSET "UTF-8";
+
+.kpkStreamContainer {
+	
+}
+
+.kpkStreamContainerHeader {
+	
+}
+
+.kpkStreamContainerMore {
+	cursor: pointer;
+}
+
+.kpkStreamContainerContainer {
+	
+}
+
+.kpkStreamContainerMore {
+	visibility: hidden;
+}
+
+.tundra .kpkStreamContainerTitle {
+	background: url("../../dijit/themes/tundra/images/titleBar.png") repeat-x scroll left bottom #FFFFFF;
+	border: 1px solid #BFBFBF;
+	padding: 4px 5px;
+}
+
+.tundra .kpkStreamContainerTitleHover {
+	background: url("../../dijit/themes/tundra/images/accordionItemHover.gif") repeat-x scroll center bottom #F8FAFD;
+}
+
+.tundra .kpkStreamContainerHeader {
+	background: url("../../dijit/themes/tundra/images/tabEnabled.png") repeat-x scroll center top #E9E9E9;
+	border-color: 1px solid #ACA899;
+	color: #000000 !important;	
+	padding: 4px 1.5em 3px;
+}
+
+.tundra .kpkStreamContainerItemInner {
+	padding: 1.5em;
+}
+
+.tundra .kpkStreamContainerItem {
+	border-bottom: 1px solid #E9E9E9;
+}
+
+.tundra .kpkStreamContainerMore {
+	background-color: #F7F7F7;
+	border: 1px solid #CCCCCC;
+	padding: 5px;
+	margin: 3px 6px 3px;
+	text-align: center;
+}
+
+.tundra .kpkStreamContainerMoreHover {
+	background-color: #3559AC;
+	color: #FFFFFF;
+}
+
+.tundra .kpkStreamContainerMoreActive {
+	background-color: #3559AC;
+	color: #FFFFFF;
+}
+
+.tundra .kpkStreamContainerEmpty {
+	text-align: center;
+	margin: 2em;
+}
+
+.soria .kpkStreamContainerTitle {
+	background: url("../../dijit/themes/soria/images/titleBar.png") repeat-x scroll left top #FFFFFF;
+	border: 1px solid #BFBFBF;
+	color: #6D6D6D;
+	font-size: 0.9em;
+	font-weight: bold;
+	padding: 4px 5px;
+}
+
+.soria .kpkStreamContainerTitleHover {
+	background: url("../../dijit/themes/soria/images/accordionItemActive.png") repeat-x scroll center top #F9F9F9;
+}
+
+.soria .kpkStreamContainerHeader {
+	background: url("../../dijit/themes/soria/images/titleBar.png") repeat-x scroll center top #E9E9E9;
+	border-color: transparent #ACA899 #919191 transparent;
+	border-width: 1px;
+	color: #000000 !important;
+	padding: 4px 1.5em 3px;
+}
+
+.soria .kpkStreamContainerItemInner {
+	padding: 1.5em;
+}
+
+.soria .kpkStreamContainerItem {
+	border-bottom: 1px solid #E9E9E9;
+}
+
+.soria .kpkStreamContainerMore {
+	background-color: #FFFFFF;
+	color: #243C5F;
+	border: 1px solid #B1BADF;
+	padding: 5px;
+	margin: 3px 6px 3px;
+	text-align: center;
+}
+
+.soria .kpkStreamContainerMoreHover {
+	background-color: #D9E6F9;
+	color: #243C5F;
+}
+
+.soria .kpkStreamContainerMoreActive {
+	background-color: #D9E6F9;
+	color: #243C5F;
+}
+
+.soria .kpkStreamContainerEmpty {
+	text-align: center;
+	margin: 2em;
+}
+
+.nihilo .kpkStreamContainerTitle {
+	background: url("../../dijit/themes/nihilo/images/titleBar.png") repeat-x scroll left top #FFFFFF;
+	border: 1px solid #BFBFBF;
+	color: #6D6D6D;
+	font-size: 0.9em;
+	font-weight: bold;
+	padding: 4px 5px;
+}
+
+.nihilo .kpkStreamContainerTitleHover {
+	background: url("../../dijit/themes/nihilo/images/accordionItemActive.png") repeat-x scroll center top #F9F9F9;
+}
+
+.nihilo .kpkStreamContainerHeader {
+	background: url("../../dijit/themes/nihilo/images/titleBar.png") repeat-x scroll center top #E9E9E9;
+	border-color: transparent #ACA899 #919191 transparent;
+	border-width: 1px;
+	color: #000000 !important;
+	padding: 4px 1.5em 3px;
+}
+
+.nihilio .kpkStreamContainerItemInner {
+	padding: 1.5em;
+}
+
+.nihilo .kpkStreamContainerItem {
+	border-bottom: 1px solid #E9E9E9;
+}
+
+.nihilo .kpkStreamContainerMore {
+	background-color: #FFFFFF;
+	border: 1px solid #CCCCCC;
+	padding: 5px;
+	margin: 3px 6px 3px;
+	text-align: center;
+}
+
+.nihilo .kpkStreamContainerMoreHover {
+	background-color: #FFE284;
+	color: #243C5F;
+}
+
+.nihilo .kpkStreamContainerMoreActive {
+	background-color: #FFE284;
+	color: #243C5F;
+}
+
+.nihilo .kpkStreamContainerEmpty {
+	text-align: center;
+	margin: 2em;
+}
+
+.claro .kpkStreamContainerTitle {
+	background-color: #EFEFEF;
+	background-image: url("../../dijit/themes/claro/images/titlebar.png");
+	background-repeat: repeat-x;
+	border: 1px solid #B5BCC7;
+	-webkit-transition-duration: 0.35s;
+	-webkit-transition-property: background-color, border;
+	-moz-transition-duration: 0.35s;
+	-moz-transition-property: background-color, border;
+	transition-duration: 0.35s;
+	transition-property: background-color, border;
+	min-height: 17px;
+	padding: 6px 7px 3px;
+}
+
+.claro .kpkStreamContainerTitleHover {
+	background-color: #ABD6FF;
+	border-color: #769DC0;
+	-webkit-transition-duration: 0.25s;
+	-moz-transition-duration: 0.25s;
+	transition-duration: 0.25s;
+}
+
+.claro .kpkStreamContainerTitleActive {
+	background-color: #7DBEFA;
+	border-color: #769DC0;
+}
+
+.claro .kpkStreamContainerHeader {
+	padding: 4px 1.5em 3px;
+	margin-top: 3px;
+	background-color: #EFEFEF;
+	background-image: url("../../dijit/themes/claro/images/commonHighlight.png");
+	background-position: 0 0;
+	background-repeat: repeat-x;
+	border: 1px solid #B5BCC7;
+}
+
+.claro .kpkStreamContainerItemInner {
+	padding: 1.5em;
+}
+
+.claro .kpkStreamContainerItem {
+	border-bottom: 1px solid #B5BCC7;
+	-webkit-transition-duration: 0.35s;
+	-webkit-transition-property: background-color;
+	-moz-transition-duration: 0.35s;
+	-moz-transition-property: background-color;
+	transition-duration: 0.35s;
+	transition-property: background-color;
+}
+
+.claro .kpkStreamContainerItemHover {
+	background-color: #E9F4FE;
+	-webkit-transition-duration: 0.25s;
+	-moz-transition-duration: 0.25s;
+	transition-duration: 0.25s;
+}
+
+.claro .kpkStreamContainerItemActive {
+	background-color: #E9F4FE;
+}
+
+.claro .kpkStreamContainerMore {
+	background-color: #EFEFEF;
+	background-image: url("../../dijit/themes/claro/images/commonHighlight.png");
+	background-position: 0 0;
+	background-repeat: repeat-x;
+	-webkit-transition-duration: 0.35s;
+	-webkit-transition-property: background-color, border;
+	-moz-transition-duration: 0.35s;
+	-moz-transition-property: background-color, border;
+	transition-duration: 0.35s;
+	transition-property: background-color, border;
+	border: 1px solid #B5BCC7;
+	padding: 5px;
+	margin: 3px 6px 3px;
+	text-align: center;
+}
+
+.claro .kpkStreamContainerMoreHover {
+	background-color: #ABD6FF;
+	border-color: #759DC0;
+	-webkit-transition-duration: 0.25s;
+	-moz-transition-duration: 0.25s;
+	transition-duration: 0.25s;
+}
+
+.claro .kpkStreamContainerMoreActive {
+	background-color: #7DBEFA;
+	border-color: #769DC0;
+}
+
+.claro .kpkStreamContainerEmpty {
+	text-align: center;
+	margin: 2em;
+}
