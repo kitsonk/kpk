@@ -175,8 +175,13 @@
 
 .claro .kpkStreamContainerTitle {
 	background-color: #EFEFEF;
-	background-image: url("../../dijit/themes/claro/images/titlebar.png");
+	background-image: url("../../dijit/themes/claro/images/standardGradient.png");
 	background-repeat: repeat-x;
+	background-image: -moz-linear-gradient(rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0) 100%);
+  	background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0) 100%);
+  	background-image: -o-linear-gradient(rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0) 100%);
+  	background-image: -ms-linear-gradient(rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0) 100%);
+  	_background-image: none;
 	border: 1px solid #B5BCC7;
 	-webkit-transition-duration: 0.35s;
 	-webkit-transition-property: background-color, border;
@@ -205,9 +210,13 @@
 	padding: 4px 1.5em 3px;
 	margin-top: 3px;
 	background-color: #EFEFEF;
-	background-image: url("../../dijit/themes/claro/images/commonHighlight.png");
-	background-position: 0 0;
+	background-image: url("../../dijit/themes/claro/images/standardGradient.png");
 	background-repeat: repeat-x;
+	background-image: -moz-linear-gradient(rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0) 100%);
+  	background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0) 100%);
+  	background-image: -o-linear-gradient(rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0) 100%);
+  	background-image: -ms-linear-gradient(rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0) 100%);
+  	_background-image: none;
 	border: 1px solid #B5BCC7;
 }
 
@@ -238,9 +247,13 @@
 
 .claro .kpkStreamContainerMore {
 	background-color: #EFEFEF;
-	background-image: url("../../dijit/themes/claro/images/commonHighlight.png");
-	background-position: 0 0;
+	background-image: url("../../dijit/themes/claro/images/standardGradient.png");
 	background-repeat: repeat-x;
+	background-image: -moz-linear-gradient(rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0) 100%);
+  	background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0) 100%);
+  	background-image: -o-linear-gradient(rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0) 100%);
+  	background-image: -ms-linear-gradient(rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0) 100%);
+  	_background-image: none;
 	-webkit-transition-duration: 0.35s;
 	-webkit-transition-property: background-color, border;
 	-moz-transition-duration: 0.35s;

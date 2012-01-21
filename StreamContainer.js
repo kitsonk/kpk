@@ -1,21 +1,52 @@
 define([
         "dojo/_base/declare",
         "dojo/text!./resources/StreamContainer.html",
+        "dojo/text!./resources/_StreamContainerItem.html",
+        "dijit/_Widget",
+        "dijit/_CssStateMixin",
+        "dijit/_Contained",
         "dijit/layout/_LayoutWidget",
         "dijit/_TemplatedMixin",
         "dijit/_CssStateMixin",
-        "./_StreamContainerItem",
-        "dojo/_base/array", //arrayUtil.forEach
+        "dojo/_base/array", //darray.forEach
         "dojo/_base/connect", //connect.disconnect
         "dojo/_base/event", //event.stop
-        "dojo/_base/lang", //lang.trim
+        "dojo/_base/lang", //dlang.trim
+        "dojo/_base/fx", //baseFx.fadeIn
         "dojo/dom-attr", //attr.set attr.get attr.has
         "dojo/dom-geometry", //domGeometry.position
         "dojo/dom-style", //style.set
+        "dojo/fx", //coreFx.combine coreFx.wipeIn
         "dojo/html", //html.set
         "dojo/query", //query
         "dojo/window" //winUtils.getBox
-],function(declare,template,_LayoutWidget,_TemplatedMixin,_CssStateMixin,_StreamContainerItem,arrayUtil,connect,event,lang,attr,domGeometry,style,html,query,winUtils) {
+],function(declare,template,itemTemplate,_Widget,_CssStateMixin,_Contained,_LayoutWidget,_TemplatedMixin,_CssStateMixin,darray,
+		connect,event,dlang,baseFx,attr,domGeometry,style,coreFx,html,query,winUtils) {
+	
+	var _StreamContainerItem = declare([_Widget,_TemplatedMixin,_Contained,_CssStateMixin],{
+		
+		templateString: itemTemplate,
+		insert: false,
+		item: null,
+		
+		baseClass: "kpkStreamContainerItem",
+		
+		startup: function() {
+			this.inherited(arguments);
+			if (this.content) {
+				if (this.insert) {
+					style.set(this.containerNode,"opacity","0");
+					style.set(this.domNode,"height","0px");
+					html.set(this.containerNode,this.content);
+					coreFx.combine([coreFx.wipeIn({node: this.domNode, duration: 750}),baseFx.fadeIn({node: this.containerNode, duration: 1000})]).play();
+				} else {
+					style.set(this.containerNode,"opacity","0");
+					html.set(this.containerNode,this.content);
+					baseFx.fadeIn({node: this.containerNode, duration: 1000}).play();
+				}
+			}
+		}
+	});
 	
 	return declare([_LayoutWidget,_TemplatedMixin,_CssStateMixin],{
 		
@@ -67,7 +98,7 @@ define([
 		markupFactory: function (params, srcNodeRef, ctor) {
 			query('div',srcNodeRef).map(function(node){
 				if (attr.has(node,'data-dojo-subtype')) {
-					var subType = lang.trim(attr.get(node,'data-dojo-subtype')).toLowerCase();
+					var subType = dlang.trim(attr.get(node,'data-dojo-subtype')).toLowerCase();
 					switch (subType) {
 					case 'title' :
 						params.title = (node.children.length) ? node.children : node.innerHTML;
@@ -94,7 +125,7 @@ define([
 					this._moreConnections.push(this.connect(null, "onscroll", "_calcMoreVisible"));
 				} else {
 					style.set(this.moreNode,'visibility','hidden');
-					arrayUtil.forEach(this._moreConnections,connect.disconnect);
+					darray.forEach(this._moreConnections,connect.disconnect);
 				}
 				this.more = more;
 			}
