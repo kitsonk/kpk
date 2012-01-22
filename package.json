@@ -2,11 +2,11 @@
 	"name": "kpk",
 	"author": "Kitson Kelly",
 	"description": "Several useful widgets I have developed",
-	"version":"1.0.0",
+	"version":"1.0.1",
 	"main":"./DataStreamContainer",
 	"dependencies": {
-		"dojo": "current",
-		"dijit": "current"
+		"dojo": "1.7.1",
+		"dijit": "1.7.1"
 	},
 	"licenses": [
 		 {
